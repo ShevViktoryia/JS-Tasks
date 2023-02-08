@@ -5,3 +5,24 @@
 
 const checkRange = (number, min ,max) => (number >= min && number <= max);
 const checkRange2 = (number, min ,max) => !(number < min || number > max);
+
+/*Есть объект с именами и заработными платами инженеров:
+const engineers = {
+Den: 1000,
+Matt: 5000,
+Steve: 2000
+}
+Вывести в консоль через шаблонные строки заработную плату всех работников в таком формате:
+Заработная плата ххх составляет ххх рублей.
+Ваше решение должно работать для любого количества ключей в объекте!
+*/
+const engineers = {
+  Den: 1000,
+  Matt: 5000,
+  Steve: 2000
+};
+const outputString = obj => {
+  for(let key in obj) {
+    console.log(`Заработная плата ${key} составляет ${obj[key]} рублей.`);
+  }
+}
