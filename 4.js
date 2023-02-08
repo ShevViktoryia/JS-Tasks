@@ -57,3 +57,6 @@ const filterFor = (arr, a) => {
   return arr.filter(item => item >= a);
 }
 filterFor(arr, 5);
+
+//Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
+const copyArr = arr => [].concat(arr);
