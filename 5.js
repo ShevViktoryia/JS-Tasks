@@ -11,3 +11,10 @@ const checkSpam = str => {
 
   return (str.toLowerCase().includes(substr1.toLowerCase()) || str.toLowerCase().includes(substr2.toLowerCase()));
 }
+
+//Написать функцию, которой на вход подается строка, на выход она дает символы наоборот (разворачивает строку). 
+//Пример: «привет Женя» -> «янеЖ тевирп»
+//Обратите внимание: метод reverse существует только у массивов.
+
+const stringReverse = str => str.split('').reverse().join('');
+
