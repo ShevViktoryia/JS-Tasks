@@ -39,3 +39,13 @@ const getInfo = stations => {
 }
 getInfo(stations);
 
+//Напишите функцию unique(arr), которая принимает массив, а возвращает новый массив, содержащий только уникальные элементы arr.
+const unique = arr => {
+  let res = [];
+  arr.forEach(item => {
+    if(!res.includes(item)) {
+      res.push(item);
+    }
+  });
+  return res;
+}
