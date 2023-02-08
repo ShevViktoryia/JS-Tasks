@@ -60,3 +60,23 @@ filterFor(arr, 5);
 
 //Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
 const copyArr = arr => [].concat(arr);
+
+//Создайте функцию sumObjectValues, которая будет суммировать все значения свойств, которые являются числами. 
+//Сумму чисел необходимо вернуть из функции.
+
+const objectWithNumbers = {
+  a: 10,
+  b: 20,
+  c: 'string',
+  d: 12,
+}
+const sumObjectValues = obj => {
+  let sum = 0;
+  for(let key of Object.values(obj)) {
+    if(typeof key == 'number') {
+      sum += key;
+    }
+  }
+  return sum;
+}
+sumObjectValues(objectWithNumbers);
