@@ -93,12 +93,31 @@ let numbers = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70]
 Само максимальное число мы уже нашли в прошлой части задачи, повторно его искать не нужно.
 */
 const sumElem = arr => {
-  let sum = 0;
+  let sum = 0, evenSum = 0, max = 0, indArr = [];
   arr.forEach(i => {
     sum += i;
   });
-  return sum;
+  arr.forEach(i => {
+    if(i % 2 === 0) {
+      evenSum += i;
+    }
+  });
+  arr.forEach(i => {
+    if(i > max) {
+      max = i;
+    }
+  });
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === max) {
+      indArr.push(i);
+    }
+  }
+  console.log(sum);
+  console.log(evenSum);
+  console.log(max);
+  console.log(...indArr);
 }
+sumElem(numbers);
 
 /*
 Определить массив let arr = [5, 4, 3, -3, -10, -1, 8, -20, 0];
