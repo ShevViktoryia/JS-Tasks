@@ -120,3 +120,18 @@ const filterArr = arr => {
 const filterArrByNum = (arr, num) => {
   return arr.filter(item => item >= num);
 }
+
+/*
+Существует массив пользователей, например:
+const users = [{name: 'Vasya', age: 23}, {name: 'Olya', age: 12}, {name: 'Anna', age: 22},
+{name: 'Alex', age: 18}, {name: 'Valery', age: 8}]
+Пройти в цикле по массиву и вывести имена всех пользователей, возраст которых больше 15.
+*/
+const users = [{name: 'Vasya', age: 23}, {name: 'Olya', age: 12}, {name: 'Anna', age: 22}, {name: 'Alex', age: 18}, {name: 'Valery', age: 8}];
+const filterArrObj = arr => {
+  arr.forEach(item => {
+    if(item.age > 15) {
+      console.log(item.name);
+    }
+  });
+}
