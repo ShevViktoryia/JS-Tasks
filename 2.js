@@ -11,5 +11,3 @@ access = false;
 */
 let country = 'Sweden', access;
 access = country == 'Sweden' ? true : false;
-
-
