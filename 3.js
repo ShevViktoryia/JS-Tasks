@@ -135,3 +135,28 @@ const filterArrObj = arr => {
     }
   });
 }
+
+/*
+Задать массив слов. Например:
+let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
+1) В цикле сформировать массив объектов с ключами word (само слово), length (длина слова):
+[{word:'морковь', length: 7}, {word:'баклажан', length: 8} и т.п.]
+Вывести этот массив в консоль.
+Подсказка: длину строки можно определить с помощью метода .length. Например, для переменной let string = 'text' 
+это будет string.length (результат - 4, т.к. слово text состоит из 4 символов)
+2) Пройтись по полученному массиву объектов и вывести в консоль строки вида "слово - длина_слова", например "картошка - 8"
+*/
+
+let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
+const createArrObj = arr => {
+  let res = [];
+  arr.forEach(item => {
+    res.push({word: `${item}`, length: `${item.length}`});
+  });
+  console.log(res);
+
+  res.forEach(item => {
+    console.log(`${item.word} - ${item.length}`);
+  });
+}
+createArrObj(vegetables);
