@@ -26,3 +26,12 @@ const outputString = obj => {
     console.log(`Заработная плата ${key} составляет ${obj[key]} рублей.`);
   }
 }
+
+/*Создать массив из 5 элементов.
+Используя цикл for, вывести каждый второй элемент массива в консоль.*/
+const createArr = () => {
+  let arr = [1, 2, 3, 4, 5];
+  for(let i = 1; i < arr.length; i += 2) {
+    console.log(arr[i]);
+  }
+}
