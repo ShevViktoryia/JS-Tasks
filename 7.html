@@ -112,3 +112,23 @@ input_task1.addEventListener('mousemove', (event) => {
     hide_block.classList.contains('none') ? hide_block.style.display = "none" : hide_block.style.display = "block";
   });
 </script>
+
+<!-- 9. Создайте раскрывающееся меню -->
+<ul style="width: 200px; height: fit-content; border: 1px solid black;" class="menu">Сладости. Нажми на меня</ul>
+<script>
+  let ul = document.querySelector(".menu");
+  let li = document.createElement("li");
+  li.textContent = 'Пирожок';
+  li.style.display = 'none';
+  ul.append(li);
+
+  ul.addEventListener('click', () => {
+    ul.classList.toggle('open');
+    if(ul.classList.contains('open')) {
+      li.style.display = 'block';
+    }
+    else {
+      li.style.display = 'none';
+    }
+  });
+</script>
