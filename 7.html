@@ -64,3 +64,13 @@ input_task1.addEventListener('mousemove', (event) => {
     res.innerHTML = `Нажатая клавиша: ${event.key}`;
   });
 </script>
+
+<!-- 6. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, 
+но только если в момент клика нажата клавиша Ctrl. -->
+<div style="width: 100px; height: 100px; border: 1px solid black;" class="object"></div>
+<script>
+  let object = document.querySelector('.object');
+  object.addEventListener('click', event => {
+    event.ctrlKey ? object.style.background = "red" : object.style.background = "white";
+  })
+</script>
