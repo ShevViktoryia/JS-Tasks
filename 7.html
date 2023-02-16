@@ -97,3 +97,18 @@ input_task1.addEventListener('mousemove', (event) => {
     }
   });
 </script>
+
+<!-- 8. Создайте кнопку и элемент. 
+При нажатии на кнопку, будет скрываться элемент -->
+
+<div style="width: 80px; height: 80px; border: 1px solid black;" class="hide_block"></div>
+<button class="hide" style="width: 60px; height: 30px;">Click</button>
+<script>
+  let hide_block = document.querySelector('.hide_block');
+  let hide_button = document.querySelector('.hide');
+
+  hide_button.addEventListener('click', () => {
+    hide_block.classList.toggle('none');
+    hide_block.classList.contains('none') ? hide_block.style.display = "none" : hide_block.style.display = "block";
+  });
+</script>
