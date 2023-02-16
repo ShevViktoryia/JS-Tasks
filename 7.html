@@ -42,3 +42,14 @@ input_task1.addEventListener('mousemove', (event) => {
     square_2.style.left = `${event.clientX - (square_2.offsetWidth / 2)}px`;
   });
 </script>
+
+<!-- 4. Создайте инпут который будет выводить код последнего элемента введенного в инпут  -->
+<input style="width: 100px; height: 80px;" class="task_4"></input>
+<div class="output"></div>
+<script>
+  let input_task4 = document.querySelector('.task_4');
+  let output = document.querySelector('.output')
+  input_task4.addEventListener('keydown', event => {
+    output.innerHTML = `Код нажатой клавиши: ${event.key.codePointAt()}`;
+  });
+</script>
