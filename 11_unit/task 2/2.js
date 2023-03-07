@@ -3,10 +3,9 @@
 
 const names = ['John', 'Sam', 'Peter', 'Kate', 'Alex'];
 function consoleElem(first, second, third) {
-  [first, second, third] = names;
   console.log(first);
   console.log(second);
   console.log(third);
 }
 
-consoleElem(names);
+consoleElem(...names);
