@@ -15,6 +15,5 @@ function Shop(title, address) {
 let shops = [];
 let Green = new Shop('Green', 'ул. Петра Мстиславца 11, Минск');
 let ProStore = new Shop('ProStore', 'пр-т Дзержинского, 126, Минск');
-shops.push(JSON.parse(JSON.stringify(Green)), JSON.parse(JSON.stringify(ProStore)));
-console.log(shops);
+shops.push(Green, ProStore);
 console.log(shops.map(item => item.address));
