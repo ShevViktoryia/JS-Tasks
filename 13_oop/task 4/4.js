@@ -41,12 +41,35 @@ class Logo {
   }
 }
 
+class Circle extends Logo{
+  constructor(size, color) {
+    super();
+    this.height = size;
+    this.width = size;
+    this.color = color;
+    this.html = null;
+  }
+
+  render() {
+    const div = document.createElement('div');
+    this.html = div;
+    super.render();
+    this.html.style.position = '';
+    this.html.style.height = `${this.height}px`;
+    this.html.style.backgroundColor = `${this.color}`;
+    this.html.style.borderRadius = '50%';
+  }
+}
+
 const imgUrl = 'https://bit.ly/2tcDito';
 var mfLogotip = new Logo(imgUrl);
+var mfCircle = new Circle(50, 'yellow');
 console.log(mfLogotip);
+console.log(mfCircle);
 
 // запускаем наше микро-приложение
 mfLogotip.init();
+mfCircle.render();
 
 mfLogotip.moveRight();
 mfLogotip.moveRight();
