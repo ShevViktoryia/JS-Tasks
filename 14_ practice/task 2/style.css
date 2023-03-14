@@ -1,0 +1,38 @@
+.change_theme {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  padding: 15px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.dark-theme {
+  background-color: rgb(53, 51, 51);
+  color: white;
+  border: 1px solid white;
+}
+
+.backstage_article {
+  width: 50%;
+}
+
+.article_title {
+  font-size: 48px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.article_text {
+  line-height: 130%;
+}
+
+.article_sub {
+  font-size: 24px;
+  line-height: 120%;
+  margin: 54px 0 34px 0;
+}
+
+.article_sub_text {
+  line-height: 140%;
+}
