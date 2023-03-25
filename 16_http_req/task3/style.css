@@ -1,0 +1,13 @@
+.result {
+  width: 40%;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.email {
+  font-style: italic;
+}
