@@ -1,0 +1,47 @@
+#widget {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+  height: fit-content;
+  border: 1px solid blue;
+  color: white;
+}
+
+#current {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  height: 40%;
+  padding: 10px;
+}
+
+.forecast {
+  height: fit-content;
+}
+
+.forecast > div {
+  height: 43px;
+  border-bottom: 1px solid blue;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.speed {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+}
