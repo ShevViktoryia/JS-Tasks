@@ -32,27 +32,46 @@ function createCard(card, data) {
   card.append(card_body);
 }
 
-fetch('https://restcountries.com/v3.1/all', {
+fetch('https://restcountries.com/v3.1/name/Spain', {
   headers: {
     Accept: "application/json"
   }
 })
 .then(response => response.json())
-.then(data => 
-  {
-    const container = document.querySelector('.container');
-    for(let i = 0; i < data.length; i += 9) {
-      const row = document.createElement('div');
-      row.className = 'row';
+.then(data => {
+  const container = document.querySelector('.container');
+  
+  const row = document.createElement('div');
+  row.className = 'row';
+  const col = document.createElement('div');
+  col.className = 'col-4';
+  for(j = 0; j < 1; j++) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    createCard(card, data[0]);
+    col.append(card);
+    row.append(col);
+    container.append(row);
+  }
+  const borders = data[0].borders;
+  borders.forEach(item => {
+    fetch(`https://restcountries.com/v3.1/alpha/${item}`)
+    .then(response => response.json())
+    .then(data => {
+      const container = document.querySelector('.container');
         const col = document.createElement('div');
         col.className = 'col-4';
-      for(j = 0; j < 3; j++) {
         const card = document.createElement('div');
         card.className = 'card';
-        createCard(card, data[i++]);
+        card.style.width = '80%';
+        createCard(card, data[0]);
+        const card_header = document.createElement('h5');
+        card_header.className = 'card-header';
+        card_header.textContent = 'Соседняя страна';
+        card.prepend(card_header);
         col.append(card);
         row.append(col);
-      }
-      container.append(row);
-    }
+        container.append(row);
+    })
   });
+});
