@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+}
+
+.card {
+  height: fit-content;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
