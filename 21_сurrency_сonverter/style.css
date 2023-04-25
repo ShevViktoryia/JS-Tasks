@@ -1,0 +1,28 @@
+*, :after, :before, input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
+.form-select {
+  max-width: 17%;
+}
+
+.double-arrows {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.double-arrows:before {
+  content: '\21C4';
+  font-family: 'icons';
+  font-size: 18px;
+  color: black;
+}
